@@ -16,12 +16,12 @@ class UploadJobNow extends StatefulWidget {
 
 class _UploadJobNowState extends State<UploadJobNow> {
   final TextEditingController _jobCategoryController =
-      TextEditingController(text: 'Select Job Category');
+      TextEditingController(text: 'Select Product Category');
   final TextEditingController _jobTitleController = TextEditingController();
   final TextEditingController _jobDescriptionController =
       TextEditingController();
   final TextEditingController _jobDeadlineDateController =
-      TextEditingController(text: 'Job DeadLine date');
+      TextEditingController(text: 'Enter the expirartion date');
   final _formKey = GlobalKey<FormState>();
   DateTime? picked;
   Timestamp? deadlineDateTimeStamp;
