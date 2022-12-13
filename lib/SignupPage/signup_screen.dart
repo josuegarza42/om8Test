@@ -434,7 +434,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
                           },
                           style: const TextStyle(color: Colors.white54),
                           decoration: const InputDecoration(
-                            hintText: 'Company address',
+                            hintText: 'Address',
                             hintStyle: TextStyle(color: Colors.white70),
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: Colors.white70),
