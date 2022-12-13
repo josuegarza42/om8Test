@@ -1,9 +1,10 @@
 # dev_job
 
+Este proyecto se comenzo el 07/12/2022 y se culmino el 12/12/2022
+
 # Link de descarga del apk:
 https://drive.google.com/file/d/1rc7oy05QrSwoUPxGSQs1a33fa312rNcR/view?usp=share_link
 
-A new Flutter project.
 
 ## Getting Started
 
