@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "677700509082",
+    "project_id": "dev-job-e715a",
+    "storage_bucket": "dev-job-e715a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:677700509082:android:05e8bab5db7bc765f0ee23",
+        "android_client_info": {
+          "package_name": "devsthink.dev_job"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "677700509082-il4vdcremijgk1gfjp5f1jphp9a5ukr8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlPzWtSW9v30numZel2UuWsMfjSamXteM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "677700509082-il4vdcremijgk1gfjp5f1jphp9a5ukr8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
