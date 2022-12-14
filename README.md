@@ -5,6 +5,8 @@ Este proyecto se comenzo el 07/12/2022 y se culmino el 12/12/2022
 # Link de descarga del apk:
 https://drive.google.com/file/d/1rc7oy05QrSwoUPxGSQs1a33fa312rNcR/view?usp=share_link
 
+#Documentacion del proyecto:
+https://github.com/josuegarza42/om8Test/blob/main/devjob%20prueba%20practica.pdf
 
 ## Getting Started
 
