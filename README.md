@@ -59,7 +59,7 @@ https://www.udemy.com/user/muhammad-ali-zeb-3/ (Varios cursos de este autor) <br
 https://www.udemy.com/course/learn-flutter-3-firebase-build-freelancer-clone-app/learn/lecture/33660208#overview <br>
 Una vez que pude mostrar productos que yo creaba ahora si podía pasar al siguiente paso, el cual era la implementación de la API de FakeStore y esta misma poder brindar la implementación del modulo de pago con stripe. Desafortunadamente el tiempo me alcanzo y esto será implementado en una siguiente versión.
 ### Continuacion del reto:
-18/12/22
+18/12/22 <br>
 El reto en este momento era utilizar el API de FakeStore, a lo cual acudi con Ulises Uriel Dominguez Perez (BlurryBunny) para solicitar apoyo, el cual en todo momento me lo brindo y con su ayuda pude conseguir avanzar en este reto. <br>
 El proyecto evoluciono en otras 2 pantallas y se adapto codigo para que este funcionara en el proyecto original.
 Reto: No sabia como utilizar el api de FakeStore
