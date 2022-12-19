@@ -6,7 +6,7 @@ Este proyecto se comenzo el 07/12/2022 y se culmino el 12/18/2022
 Ulises Uriel Dominguez Perez (BlurryBunny)
 
 # Link de descarga del apk:
-https://drive.google.com/file/d/1rc7oy05QrSwoUPxGSQs1a33fa312rNcR/view?usp=share_link
+https://drive.google.com/file/d/1es6Hau_7ZnBXf5576Qqm0xuTb6XUDT00/view?usp=share_link
 
 # Documentacion del proyecto:
 https://github.com/josuegarza42/om8Test/blob/main/devjob%20prueba%20practica.pdf
