@@ -3,7 +3,7 @@
 Este proyecto se comenzo el 07/12/2022 y se culmino el 12/18/2022
 
 # Colaboracion con:
-Ulises Uriel Dominguez Perez (BlurryBunny)
+Ulises Uriel Dominguez Perez (BlurryBunny) <br>
 Profesor de Udemy: <br>
 https://www.udemy.com/user/muhammad-ali-zeb-3/
 
