@@ -9,7 +9,7 @@ Profesor de Udemy: Muhammad Ali Zeb <br>
 https://www.udemy.com/user/muhammad-ali-zeb-3/
 
 # Disclaimer:
-Esta aplicación fue realizada con ayuda de tutoriales, sitios web que brindan apoyo a los # Licencia
+Esta aplicación fue realizada con ayuda de tutoriales, sitios web que brindan apoyo a los 
 programadores en situaciones específicas (Udemy y stackoverflow), Tambien con ayuda de Ulises Uriel Dominguez Perez (BlurryBunny), al cual agradezco el apoyo brindado.
 se realizó un trabajo de investigación ante problemas específicos y estos sitios fueron de apoyo para el proyecto.
 
