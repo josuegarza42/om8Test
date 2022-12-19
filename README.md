@@ -4,6 +4,8 @@ Este proyecto se comenzo el 07/12/2022 y se culmino el 12/18/2022
 
 # Colaboracion con:
 Ulises Uriel Dominguez Perez (BlurryBunny)
+Profesor de Udemy: <br>
+https://www.udemy.com/user/muhammad-ali-zeb-3/
 
 # Link de descarga del apk:
 https://drive.google.com/file/d/1es6Hau_7ZnBXf5576Qqm0xuTb6XUDT00/view?usp=share_link
