@@ -1,12 +1,25 @@
-import 'package:dev_job/LoginPage/login_screen.dart';
+import 'package:dev_job/screens/login/login_screen.dart';
 import 'package:dev_job/user_state.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
+
+import 'Services/api_service.dart';
+
+
+final api_service = GetIt.instance;
+
+void initGetIt() {
+  api_service.registerLazySingleton<ApiFakeStoreService>(() => ApiFakeStoreService());
+}
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
+  initGetIt();
 }
+
+
 
 class MyApp extends StatelessWidget {
   final Future<FirebaseApp> _initialization = Firebase.initializeApp();
@@ -53,7 +66,7 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             title: "Dev Job",
             theme: ThemeData(
-              scaffoldBackgroundColor: Colors.black,
+              scaffoldBackgroundColor: Colors.white,
               primarySwatch: Colors.blue,
             ),
             home: UserState(),

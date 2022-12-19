@@ -1,39 +1,39 @@
 import 'package:flutter/material.dart';
+import '../../../config_screen.dart';
+import '../../Widgets/bottom_nav_bar.dart';
+import 'components/body.dart';
 
-import '../Widgets/bottom_nav_bar.dart';
+class HomeScreen extends StatelessWidget{
+  static String routeNavigator = "/home";
 
-class ProfileScreen extends StatefulWidget {
-  @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
-}
-
-class _ProfileScreenState extends State<ProfileScreen> {
+  const HomeScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [Colors.lightBlue, Colors.blueAccent],
           begin: Alignment.centerLeft,
           end: Alignment.centerRight,
-          stops: const [0.2, 0.9],
+          stops: [0.2, 0.9],
         ),
       ),
       child: Scaffold(
         bottomNavigationBar: BottomNavigationBarForApp(
-          indexNum: 3,
+          indexNum: 2,
         ),
+        body: const Body(),
         backgroundColor: Colors.transparent,
         appBar: AppBar(
-          title: const Text('Profile screen'),
+          title: const Text('Home'),
           centerTitle: true,
           flexibleSpace: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [Colors.lightBlue, Colors.blueAccent],
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
-                stops: const [0.2, 0.9],
+                stops: [0.2, 0.9],
               ),
             ),
           ),

@@ -1,10 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:dev_job/LoginPage/login_screen.dart';
+import 'package:dev_job/screens/login/login_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-import '../Services/global_variables.dart';
+import '../../Services/global_variables.dart';
 
 class ForgetPassword extends StatefulWidget {
   @override
@@ -26,7 +26,7 @@ class _ForgetPasswordState extends State<ForgetPassword>
 
     super.dispose();
   }
-
+//inicializa la animacion
   @override
   void initState() {
     // TODO: implement initState
@@ -47,6 +47,8 @@ class _ForgetPasswordState extends State<ForgetPassword>
     super.initState();
   }
 
+  //si el usuario olvida su contraseña este podra recuperarla, este metodo es el que da vida a esta funcion
+  //si se olvida se utiliza: sendPasswordResetEmail, funcion de auth
   void _forgetPassSubmitForm() async {
     try {
       await _auth.sendPasswordResetEmail(
@@ -66,6 +68,7 @@ class _ForgetPasswordState extends State<ForgetPassword>
       body: Stack(
         children: [
           CachedNetworkImage(
+            //imagen animada
             imageUrl: forgetUrlImage,
             placeholder: (context, url) => Image.asset(
               'assets/images/wallpaper.jpg',
@@ -94,6 +97,7 @@ class _ForgetPasswordState extends State<ForgetPassword>
                 const SizedBox(
                   height: 25,
                 ),
+                //email adrees
                 const Text(
                   'Email address',
                   style: TextStyle(
@@ -105,6 +109,7 @@ class _ForgetPasswordState extends State<ForgetPassword>
                 const SizedBox(
                   height: 15,
                 ),
+
                 TextField(
                   controller: _forgetPassTextController,
                   decoration: const InputDecoration(
@@ -121,6 +126,7 @@ class _ForgetPasswordState extends State<ForgetPassword>
                 const SizedBox(
                   height: 60,
                 ),
+                //boton de reset now
                 MaterialButton(
                   onPressed: () {
                     //todo create forgetPass submit

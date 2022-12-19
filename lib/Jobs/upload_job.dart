@@ -277,7 +277,7 @@ class _UploadJobNowState extends State<UploadJobNow> {
       ),
       child: Scaffold(
         bottomNavigationBar: BottomNavigationBarForApp(
-          indexNum: 2,
+          indexNum: 3,
         ),
         backgroundColor: Colors.transparent,
         //   appBar: AppBar(

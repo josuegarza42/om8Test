@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 
-import '../Services/global_variables.dart';
+import '../../Services/global_variables.dart';
 
 class SignUp extends StatefulWidget {
   @override
@@ -18,9 +18,10 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
+  //animacion cotrollers
   late Animation<double>? _animation;
   late AnimationController _animationController;
-
+//controladores por campo
   final TextEditingController _fullNameController =
       TextEditingController(text: '');
 
@@ -35,19 +36,25 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
 
   final TextEditingController _locationController =
       TextEditingController(text: '');
-
+// manejadores de eventos en el teclado
   final FocusNode _emailFocusNode = FocusNode();
   final FocusNode _passFocusNode = FocusNode();
   final FocusNode _phoneNumberFocusNode = FocusNode();
   final FocusNode _positionCPFocusNode = FocusNode();
-
+//controlador de signup
   final _signUpFormKey = GlobalKey<FormState>();
+  //ocultar texto para pas contraseñas
   bool _obscureText = true;
+  //usuario puede anexar su imagen
   File? imageFile;
+  //controlador para comunicacion con firebase
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  //boleano que da un estado de carga
   bool _isLoading = false;
+  //almacena un string con que se va a utilizar para subir la imagen del usuario
   String? imageUrl;
 
+  // vaciamos cada controlador para que no guarden datos basura
   @override
   void dispose() {
     // TODO: implement dispose
@@ -63,7 +70,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
     _phoneNumberFocusNode.dispose();
     super.dispose();
   }
-
+//iniciamos la animacion
   @override
   void initState() {
     // TODO: implement initState
@@ -83,7 +90,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
     _animationController.forward();
     super.initState();
   }
-
+//el usuario al subir una imagen le da 2 opciones, tomarse una foto o subir una de la galeria
   void _showImageDialog() {
     showDialog(
         context: context,
@@ -143,21 +150,21 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
           );
         });
   }
-
+//si es una imagen tomada directamente de la camara
   void _getFromCamera() async {
     XFile? pickedFile =
         await ImagePicker().pickImage(source: ImageSource.camera);
     _cropImage(pickedFile!.path);
     Navigator.pop(context);
   }
-
+//si es una imagen tomada directamente de la galeria
   void _getFromGallery() async {
     XFile? pickedFile =
         await ImagePicker().pickImage(source: ImageSource.gallery);
     _cropImage(pickedFile!.path);
     Navigator.pop(context);
   }
-
+//para edicion del la imagen
   void _cropImage(filePath) async {
     CroppedFile? croppedImage = await ImageCropper()
         .cropImage(sourcePath: filePath, maxHeight: 1080, maxWidth: 1080);
@@ -167,7 +174,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
       });
     }
   }
-
+//hace que el formulario funcione
   void _submitFormOnSignUp() async {
     final isValid = _signUpFormKey.currentState!.validate();
     if (isValid) {
@@ -213,7 +220,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
       _isLoading = false;
     });
   }
-
+//widget principal
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -221,6 +228,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
       body: Stack(
         children: [
           CachedNetworkImage(
+            //animacion de la imagen de fondo
             imageUrl: singUpUrlImage,
             placeholder: (context, url) => Image.asset(
               'assets/images/wallpaper.jpg',
@@ -242,6 +250,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
                     key: _signUpFormKey,
                     child: Column(
                       children: [
+                        //icono para subir imagen
                         GestureDetector(
                           onTap: () {
                             //TODO: CREATE SHOW IMAGEDIALOG
@@ -278,6 +287,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
                         const SizedBox(
                           height: 20,
                         ),
+                        //nombre completo
                         TextFormField(
                           textInputAction: TextInputAction.next,
                           onEditingComplete: () => FocusScope.of(context)
@@ -309,6 +319,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
                         const SizedBox(
                           height: 20,
                         ),
+                        //email
                         TextFormField(
                           textInputAction: TextInputAction.next,
                           onEditingComplete: () => FocusScope.of(context)
@@ -387,6 +398,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
                         const SizedBox(
                           height: 20,
                         ),
+                        //numero de telefono
                         TextFormField(
                           textInputAction: TextInputAction.next,
                           onEditingComplete: () => FocusScope.of(context)
@@ -419,6 +431,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
                         const SizedBox(
                           height: 20,
                         ),
+                        //adress/ direccion
                         TextFormField(
                           textInputAction: TextInputAction.next,
                           onEditingComplete: () => FocusScope.of(context)
@@ -458,6 +471,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
                                   child: const CircularProgressIndicator(),
                                 ),
                               )
+                        //boton de submit/ sign up
                             : MaterialButton(
                                 onPressed: () {
                                   //todo create submit form
@@ -489,6 +503,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin {
                         const SizedBox(
                           height: 40,
                         ),
+                        //no tienes una cuenta
                         Center(
                           child: RichText(
                             text: TextSpan(

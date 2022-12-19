@@ -1,8 +1,9 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:dev_job/Jobs/jobs_screen.dart';
 import 'package:dev_job/Jobs/upload_job.dart';
-import 'package:dev_job/Search/profile_company.dart';
-import 'package:dev_job/Search/search_companies.dart';
+import 'package:dev_job/screens/home/home.dart';
+import 'package:dev_job/screens/product_detail.dart';
+import 'package:dev_job/screens/cart_screen.dart';
 import 'package:dev_job/user_state.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,7 @@ class BottomNavigationBarForApp extends StatelessWidget {
 
   BottomNavigationBarForApp({required this.indexNum});
 
+  //log out botton
   void _logout(context) {
     final FirebaseAuth _auth = FirebaseAuth.instance;
 
@@ -72,7 +74,7 @@ class BottomNavigationBarForApp extends StatelessWidget {
           );
         });
   }
-
+//nav bar
   @override
   Widget build(BuildContext context) {
     return CurvedNavigationBar(
@@ -88,17 +90,17 @@ class BottomNavigationBarForApp extends StatelessWidget {
           color: Colors.white,
         ),
         Icon(
-          Icons.search,
+          Icons.shopping_cart,
+          size: 19,
+          color: Colors.white,
+        ),
+        Icon(
+          Icons.home,
           size: 19,
           color: Colors.white,
         ),
         Icon(
           Icons.add,
-          size: 19,
-          color: Colors.white,
-        ),
-        Icon(
-          Icons.person_pin,
           size: 19,
           color: Colors.white,
         ),
@@ -118,13 +120,13 @@ class BottomNavigationBarForApp extends StatelessWidget {
               context, MaterialPageRoute(builder: (_) => JobScreen()));
         } else if (index == 1) {
           Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (_) => AllWorkerScreen()));
+              context, MaterialPageRoute(builder: (_) => Cart_Screen()));
         } else if (index == 2) {
           Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (_) => UploadJobNow()));
+              context, MaterialPageRoute(builder: (_) =>  HomeScreen()));
         } else if (index == 3) {
           Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (_) => ProfileScreen()));
+              context, MaterialPageRoute(builder: (_) => UploadJobNow()));
         } else if (index == 4) {
           _logout(context);
         }

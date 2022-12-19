@@ -33,7 +33,7 @@ class JobWidget extends StatefulWidget {
 
 class _JobWidgetState extends State<JobWidget> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
-
+// para eliminar elementos
   _deleteDialog() {
     User? user = _auth.currentUser;
     final _uid = user!.uid;
@@ -51,7 +51,7 @@ class _JobWidgetState extends State<JobWidget> {
                           .doc(widget.jobId)
                           .delete();
                       await Fluttertoast.showToast(
-                        msg: 'Job has been deleted',
+                        msg: 'item has been deleted',
                         toastLength: Toast.LENGTH_LONG,
                         backgroundColor: Colors.grey,
                         fontSize: 18.0,
@@ -63,7 +63,7 @@ class _JobWidgetState extends State<JobWidget> {
                     }
                   } catch (error) {
                     GlobalMethod.showErrorDialog(
-                        error: 'This task cannot be deleted', ctx: ctx);
+                        error: 'This item cannot be deleted', ctx: ctx);
                   } finally {}
                 },
                 child: Row(
@@ -84,7 +84,7 @@ class _JobWidgetState extends State<JobWidget> {
           );
         });
   }
-
+//widget principal,
   @override
   Widget build(BuildContext context) {
     return Card(

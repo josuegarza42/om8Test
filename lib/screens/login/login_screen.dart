@@ -2,13 +2,15 @@
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dev_job/Services/global_methods.dart';
-import 'package:dev_job/SignupPage/signup_screen.dart';
+import 'package:dev_job/screens/login/signup_screen.dart';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import '../ForgetPassword/forget_password_screen.dart';
-import '../Services/global_variables.dart';
+import 'forget_password_screen.dart';
+import '../../Services/global_variables.dart';
+
 
 class Login extends StatefulWidget {
   @override
@@ -16,22 +18,25 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> with TickerProviderStateMixin {
+  //controladores de animacion
   late Animation<double>? _animation;
   late AnimationController _animationController;
-
+//controladores de email y contraseña
   final TextEditingController _emailTextController =
       TextEditingController(text: '');
   final TextEditingController _passTextController =
       TextEditingController(text: '');
-
+// manejador de eventos en el teclado
   final FocusNode _passFocusNode = FocusNode();
 
   bool _isLoading = false;
   bool _obscureText = true;
 
+  //Validaciones al login
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final _loginFormKey = GlobalKey<FormState>();
 
+  // vaciamos cada controlador para que no guarden datos basura
   @override
   void dispose() {
     // TODO: implement dispose
@@ -42,6 +47,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
     super.dispose();
   }
 
+  //controlador de la animacion
   @override
   void initState() {
     // TODO: implement initState
@@ -62,6 +68,8 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
     super.initState();
   }
 
+
+  //brinda la informacion de los controladores y checan si el login es valido o no,
   void _submitFormOnLogin() async {
     final isValid = _loginFormKey.currentState!.validate();
     if (isValid) {
@@ -87,12 +95,15 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
     });
   }
 
+
+  //widget principal
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
           CachedNetworkImage(
+            //imagen que realizara la animacion
             imageUrl: loginUrlImage,
             placeholder: (context, url) => Image.asset(
               'assets/images/wallpaper.jpg',
@@ -121,6 +132,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                     key: _loginFormKey,
                     child: Column(
                       children: [
+                        //email
                         TextFormField(
                           textInputAction: TextInputAction.next,
                           onEditingComplete: () => FocusScope.of(context)
@@ -149,6 +161,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                             ),
                           ),
                         ),
+                        //contraseña
                         const SizedBox(
                           height: 5,
                         ),
@@ -197,6 +210,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                         const SizedBox(
                           height: 15,
                         ),
+                        //olvidaste contraseña
                         Align(
                           alignment: Alignment.bottomRight,
                           child: TextButton(
@@ -219,6 +233,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                         const SizedBox(
                           height: 10,
                         ),
+                        //boton de login
                         MaterialButton(
                           onPressed: _submitFormOnLogin,
                           color: Colors.cyan,
@@ -246,6 +261,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                         const SizedBox(
                           height: 40,
                         ),
+                        //no tienes una cuenta
                         Center(
                           child: RichText(
                             text: TextSpan(children: [
