@@ -17,14 +17,14 @@ se realizó un trabajo de investigación ante problemas específicos y estos sit
 # Link de descarga del apk:
 https://drive.google.com/file/d/141pJTYa9wWfRRpWkYWaMInfQw_gvMYur/view?usp=share_link
 
-# Documentacion del proyecto:
+# Documentacion del proyecto: (12/12/22)
 https://github.com/josuegarza42/om8Test/blob/main/devjob%20prueba%20practica.pdf
 
-<h2 align="center">
+<h1 align="center">
 Reto Red Om8 | Prueba Técnica - FrontEnd Developer - Flutter Developer 💻
-</h2> 
+</h1> 
 
-## Requisitos
+# Requisitos
 
 1. Pantalla de Login/Registro (Autenticación con Firebase Auth) ✅
 2. Navegación simple con animación (Bottom Nav Bar) con 2 Páginas: ✅
