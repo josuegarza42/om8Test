@@ -9,7 +9,9 @@ import 'home_header.dart';
 import 'popular_product.dart';
 
 class Body extends StatelessWidget {
-  const Body({super.key,});
+  const Body({
+    super.key,
+  });
   ApiFakeStoreService get service => GetIt.instance<ApiFakeStoreService>();
   // ApiFakeStoreService get service -> GetIt.I<ApiFakeStoreService>();
 
@@ -18,22 +20,21 @@ class Body extends StatelessWidget {
     return Container(
       child: SingleChildScrollView(
           child: Center(
-            child: FutureBuilder(
-                future: service.getAllProducts(),
-                builder: (_, AsyncSnapshot<List<Product>> snapshot) {
-                  if (!snapshot.hasData) {
-                    // return const CircularProgressIndicator();
-                  }
+        child: FutureBuilder(
+            future: service.getAllProducts(),
+            builder: (_, AsyncSnapshot<List<Product>> snapshot) {
+              if (!snapshot.hasData) {
+                // return const CircularProgressIndicator();
+              }
 
-                  final List<Product> products = snapshot.data ?? [];
-                  return Column(
-                    children: [
-
-                      GridProducts(products: products),
-                    ],
-                  );
-                }),
-          )),
+              final List<Product> products = snapshot.data ?? [];
+              return Column(
+                children: [
+                  GridProducts(products: products),
+                ],
+              );
+            }),
+      )),
     );
   }
 }

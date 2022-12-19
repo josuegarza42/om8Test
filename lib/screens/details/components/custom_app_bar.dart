@@ -5,7 +5,6 @@ import '../../../config_screen.dart';
 import '../../../constants.dart';
 
 class CustomAppBar extends StatelessWidget {
-
   const CustomAppBar({super.key});
 
   // AppBar().preferredSize.height provide us the height that appy on our app bar
@@ -13,33 +12,17 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Padding(
-        padding:
-            EdgeInsets.symmetric(horizontal: 20),
-        child: Row(
-          children: [
-            SizedBox(
-              height: 40,
-              width: 40,
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(60),
-                  ),
-                  foregroundColor: Colors.cyan,
-                  backgroundColor: Colors.white,
-                  padding: EdgeInsets.zero,
-                ),
-                onPressed: () => Navigator.pop(context),
-                child: SvgPicture.asset(
-                  "assets/icons/Back ICon.svg",
-                  height: 15,
-                ),
-              ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.lightBlue[500],
+          elevation: 0,
+          title: Center(
+            child: Text(
+              'Product',
             ),
-            const Spacer()
-          ],
+          ),
         ),
       ),
     );

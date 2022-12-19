@@ -4,7 +4,6 @@ import 'package:dev_job/config_screen.dart';
 import 'package:dev_job/constants.dart';
 import 'package:dev_job/models/Product.dart';
 
-
 class ProductDescription extends StatelessWidget {
   const ProductDescription({
     Key? key,
@@ -21,8 +20,7 @@ class ProductDescription extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding:
-              EdgeInsets.symmetric(horizontal: 20),
+          padding: EdgeInsets.symmetric(horizontal: 20),
           child: Text(
             product.title,
             style: Theme.of(context).textTheme.headline6,
@@ -31,21 +29,8 @@ class ProductDescription extends StatelessWidget {
         Align(
           alignment: Alignment.centerRight,
           child: Container(
-            padding: EdgeInsets.all(15),
+            padding: EdgeInsets.all(10),
             width: 64,
-            decoration: const BoxDecoration(
-              color:
-                  Color(0xFFF5F6F9),
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(20),
-                bottomLeft: Radius.circular(20),
-              ),
-            ),
-            child: SvgPicture.asset(
-              "assets/icons/Heart Icon_2.svg",
-              color:  const Color.fromARGB(255, 178, 120, 229),
-              height: 16,
-            ),
           ),
         ),
         Padding(
@@ -63,25 +48,8 @@ class ProductDescription extends StatelessWidget {
             horizontal: 20,
             vertical: 10,
           ),
-          child: GestureDetector(
-            onTap: () {},
-            child: Row(
-              children: const [
-                Text(
-                  "Ver más detalles",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600, color: Colors.black),
-                ),
-                SizedBox(width: 5),
-                Icon(
-                  Icons.arrow_forward_ios,
-                  size: 12,
-                  color: Colors.black,
-                ),
-              ],
-            ),
-          ),
-        )
+
+        ),
       ],
     );
   }

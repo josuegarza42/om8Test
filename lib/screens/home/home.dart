@@ -3,7 +3,7 @@ import '../../../config_screen.dart';
 import '../../Widgets/bottom_nav_bar.dart';
 import 'components/body.dart';
 
-class HomeScreen extends StatelessWidget{
+class HomeScreen extends StatelessWidget {
   static String routeNavigator = "/home";
 
   const HomeScreen({super.key});

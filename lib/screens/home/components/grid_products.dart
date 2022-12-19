@@ -10,23 +10,17 @@ class GridProducts extends StatelessWidget {
   final List<Product> products;
   const GridProducts({super.key, required this.products});
 
-
-
-
   @override
   Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(20),
 
-
-
-   return Column(
-     children: [
-      Padding(
-              padding:const EdgeInsets.all(20),
-          child: SectionTitle(title: "Todos los productos", press: () {}),
-      ),
-       Padding(
-         padding: const EdgeInsets.symmetric(horizontal:10.0),
-         child: GridView.builder(
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          child: GridView.builder(
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -40,8 +34,8 @@ class GridProducts extends StatelessWidget {
               return ProductCard(product: products[index]);
             },
           ),
-       ),
-     ],
-   );
+        ),
+      ],
+    );
   }
 }

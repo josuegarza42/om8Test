@@ -25,11 +25,11 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final _mediaQueryData = MediaQuery.of(context);
-    final screenWidth = _mediaQueryData.size.width /800 ;
-    final screenHeight = _mediaQueryData.size.height /300 ;
+    final screenWidth = _mediaQueryData.size.width /2340 ;
+    final screenHeight = _mediaQueryData.size.height /1080 ;
 
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: screenWidth * 2),
+      padding: EdgeInsets.symmetric(horizontal: screenWidth * 1),
       child: SizedBox(
         width: screenWidth /2,
         child: GestureDetector(
@@ -45,7 +45,7 @@ class ProductCard extends StatelessWidget {
                 child: Container(
                   padding: EdgeInsets.all(screenHeight * 2),
                   decoration: BoxDecoration(
-                    color: kSecondaryColor.withOpacity(0.1),
+                    color: Colors.white.withOpacity(0.9),
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: Hero(
@@ -54,11 +54,11 @@ class ProductCard extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 15),
               Text(
                 product.title,
-                style: const TextStyle(color: Colors.black),
-                maxLines: 2,
+                style: const TextStyle(color: Colors.black, fontSize: 20 ),
+                maxLines: 3,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -66,7 +66,7 @@ class ProductCard extends StatelessWidget {
                   Text(
                     "\$${product.price.toString()}",
                     style: TextStyle(
-                      fontSize: screenWidth *2,
+                      fontSize: screenWidth *3,
                       fontWeight: FontWeight.w600,
                       color: Colors.black,
                     ),

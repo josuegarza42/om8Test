@@ -5,16 +5,13 @@ import '../../Widgets/bottom_nav_bar.dart';
 import 'components/body.dart';
 import 'components/custom_app_bar.dart';
 
-
-
 class DetailsScreen extends StatelessWidget {
- final Product product;
+  final Product product;
 
-  const DetailsScreen({super.key,required this.product });
+  const DetailsScreen({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
-
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
@@ -24,14 +21,11 @@ class DetailsScreen extends StatelessWidget {
           stops: [0.2, 0.9],
         ),
       ),
-
-
-
       child: Scaffold(
         bottomNavigationBar: BottomNavigationBarForApp(
           indexNum: 2,
         ),
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white.withOpacity(0.98),
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(AppBar().preferredSize.height),
           child: CustomAppBar(),
@@ -41,4 +35,3 @@ class DetailsScreen extends StatelessWidget {
     );
   }
 }
-

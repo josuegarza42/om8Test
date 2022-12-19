@@ -19,14 +19,14 @@ class DefaultButton extends StatelessWidget {
       height: 56,
       child: TextButton(
         style: TextButton.styleFrom(
-            backgroundColor: Colors.black,
+            backgroundColor: Colors.lightBlue,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(5))),
         onPressed: press,
         child: Text(
           text,
           style: TextStyle(
-              fontSize: 18, color: Colors.white),
+              fontSize: 20, color: Colors.white),
         ),
       ),
     );

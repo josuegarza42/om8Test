@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 import '../../../components/default_button.dart';
 import '../../../config_screen.dart';
 import '../../../models/Product.dart';
@@ -29,25 +28,17 @@ class Body extends StatelessWidget {
                     pressOnSeeMore: () {},
                   ),
                   TopRoundedContainer(
-                    color: const Color(0xFFF6F7F9),
-                    child: Column(
-                      children: [
-                        TopRoundedContainer(
-                          color: Colors.white,
-                          child: Padding(
-                            padding: EdgeInsets.only(
-                              left: 5 * 0.15,
-                              right: 5 * 0.15,
-                              bottom: 40,
-                              top: 15,
-                            ),
-                            child: DefaultButton(
-                              text: "Add To Cart",
-                              press: () {},
-                            ),
-                          ),
-                        ),
-                      ],
+                    color: Colors.white,
+                    child: Padding(
+                      padding: EdgeInsets.only(
+                        left: 5 * 0.15,
+                        right: 5 * 0.15,
+                        bottom: 40,
+                      ),
+                      child: DefaultButton(
+                        text: "Add To Cart",
+                        press: () {},
+                      ),
                     ),
                   ),
                 ],
