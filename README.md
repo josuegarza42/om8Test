@@ -9,7 +9,7 @@ Profesor de Udemy: Muhammad Ali Zeb <br>
 https://www.udemy.com/user/muhammad-ali-zeb-3/
 
 # Link de descarga del apk:
-https://drive.google.com/file/d/1es6Hau_7ZnBXf5576Qqm0xuTb6XUDT00/view?usp=share_link
+https://drive.google.com/file/d/141pJTYa9wWfRRpWkYWaMInfQw_gvMYur/view?usp=share_link
 
 # Documentacion del proyecto:
 https://github.com/josuegarza42/om8Test/blob/main/devjob%20prueba%20practica.pdf
