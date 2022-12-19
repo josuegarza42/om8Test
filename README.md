@@ -82,6 +82,7 @@ https://frontbackend.com/flutter/how-to-create-a-list-in-flutter <br>
 https://api.flutter.dev/flutter/widgets/FutureBuilder-class.html <br>
 https://docs.flutter.dev/development/data-and-backend/json <br>
 https://pub.dev/packages/http/example <br>
+https://www.youtube.com/watch?v=IdyPjhBqXlg <br>
 Asi mismo con la ayuda de Ulises y con su permiso pude agarrar codigo que me podia servir y adaptarlo a mi proyecto.
 
 ![WhatsApp Image 2022-12-12 at 11 17 48 PM](https://user-images.githubusercontent.com/44554474/207664324-43f9fd00-8de8-4306-9882-6f3651f67354.jpeg) 
